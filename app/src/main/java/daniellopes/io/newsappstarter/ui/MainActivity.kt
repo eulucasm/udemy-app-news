@@ -1,7 +1,8 @@
-package daniellopes.io.newsappstarter
+package daniellopes.io.newsappstarter.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import daniellopes.io.newsappstarter.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
