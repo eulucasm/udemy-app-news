@@ -1,6 +1,7 @@
 package daniellopes.io.newsappstarter.presenter.search
 
 import daniellopes.io.newsappstarter.model.Article
+import daniellopes.io.newsappstarter.model.NewsResponse
 
 interface SearchHome {
 
@@ -9,5 +10,6 @@ interface SearchHome {
       fun showFailure(message:String)
       fun hideProgressBar()
       fun showArticles(articles: List<Article>)
+
    }
 }
