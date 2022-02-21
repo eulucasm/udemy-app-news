@@ -7,9 +7,9 @@ interface SearchHome {
 
    interface Presenter{
       fun search(term:String)
-      fun showFailure(message:String)
-      fun hideProgressBar()
-      fun showArticles(articles: List<Article>)
+      fun onSuccess(newsResponse: NewsResponse)
+      fun onError(message: String)
+      fun onComplete()
 
    }
 }

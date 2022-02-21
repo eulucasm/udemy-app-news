@@ -1,6 +1,7 @@
 package daniellopes.io.newsappstarter.presenter.search
 
 import daniellopes.io.newsappstarter.model.Article
+import daniellopes.io.newsappstarter.model.NewsResponse
 import daniellopes.io.newsappstarter.model.data.NewsDataSource
 import daniellopes.io.newsappstarter.presenter.ViewHome
 
@@ -10,19 +11,22 @@ class SearchPresenter(
    ):SearchHome.Presenter {
 
    override fun search(term: String) {
-      TODO("Not yet implemented")
+      this.view.showProgressBar()
+      this.dataSource.searchNews(term, this)
+
    }
 
-   override fun showFailure(message: String) {
-      TODO("Not yet implemented")
+   override fun onSuccess(newsResponse: NewsResponse) {
+      this.view.showArticles(newsResponse.articles)
    }
 
-   override fun hideProgressBar() {
-      TODO("Not yet implemented")
+   override fun onError(message: String) {
+      this.view.showFailure(message)
    }
 
-   override fun showArticles(articles: List<Article>) {
-      TODO("Not yet implemented")
+   override fun onComplete() {
+      this.view.hideProgressBar()
    }
+
 
 }
