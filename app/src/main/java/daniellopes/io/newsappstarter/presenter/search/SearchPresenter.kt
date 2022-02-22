@@ -1,8 +1,7 @@
 package daniellopes.io.newsappstarter.presenter.search
 
-import daniellopes.io.newsappstarter.model.Article
-import daniellopes.io.newsappstarter.model.NewsResponse
-import daniellopes.io.newsappstarter.model.data.NewsDataSource
+import daniellopes.io.newsappstarter.data.local.model.NewsResponse
+import daniellopes.io.newsappstarter.repository.NewsDataSource
 import daniellopes.io.newsappstarter.presenter.ViewHome
 
 class SearchPresenter(

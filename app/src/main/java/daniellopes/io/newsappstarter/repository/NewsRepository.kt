@@ -1,9 +1,9 @@
-package daniellopes.io.newsappstarter.model.data
+package daniellopes.io.newsappstarter.repository
 
-import daniellopes.io.newsappstarter.model.Article
-import daniellopes.io.newsappstarter.model.db.ArticleDatabase
+import daniellopes.io.newsappstarter.data.local.model.Article
+import daniellopes.io.newsappstarter.data.local.db.ArticleDatabase
 
-class NewsRepository(private val db:ArticleDatabase) {
+class NewsRepository(private val db: ArticleDatabase) {
 
    suspend fun updateInsert(article: Article) = db.getArticleDao().updateInsert(article)
 

@@ -1,11 +1,11 @@
-package daniellopes.io.newsappstarter.model.db
+package daniellopes.io.newsappstarter.data.local.db
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
-import daniellopes.io.newsappstarter.model.Article
+import daniellopes.io.newsappstarter.data.local.model.Article
 
 @Database(entities = [Article::class], version = 1, exportSchema = false)
 @TypeConverters(Converters::class)

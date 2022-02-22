@@ -1,4 +1,4 @@
-package daniellopes.io.newsappstarter.ui
+package daniellopes.io.newsappstarter.ui.activity
 
 import android.os.Bundle
 import android.webkit.WebViewClient
@@ -6,8 +6,8 @@ import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.snackbar.Snackbar
 import daniellopes.io.newsappstarter.R
 import daniellopes.io.newsappstarter.databinding.ActivityArticleBinding
-import daniellopes.io.newsappstarter.model.Article
-import daniellopes.io.newsappstarter.model.data.NewsDataSource
+import daniellopes.io.newsappstarter.data.local.model.Article
+import daniellopes.io.newsappstarter.repository.NewsDataSource
 import daniellopes.io.newsappstarter.presenter.ViewHome
 import daniellopes.io.newsappstarter.presenter.favorite.FavoritePresenter
 

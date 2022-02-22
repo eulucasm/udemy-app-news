@@ -1,4 +1,4 @@
-package daniellopes.io.newsappstarter.network
+package daniellopes.io.newsappstarter.data.remote
 
 import daniellopes.io.newsappstarter.util.Constants.Companion.BASE_URL
 import okhttp3.OkHttpClient

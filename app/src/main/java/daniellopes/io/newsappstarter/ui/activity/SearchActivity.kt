@@ -1,4 +1,4 @@
-package daniellopes.io.newsappstarter.ui
+package daniellopes.io.newsappstarter.ui.activity
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,10 +7,10 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
-import daniellopes.io.newsappstarter.adapter.MainAdapter
+import daniellopes.io.newsappstarter.ui.adapter.MainAdapter
 import daniellopes.io.newsappstarter.databinding.ActivitySearchBinding
-import daniellopes.io.newsappstarter.model.Article
-import daniellopes.io.newsappstarter.model.data.NewsDataSource
+import daniellopes.io.newsappstarter.data.local.model.Article
+import daniellopes.io.newsappstarter.repository.NewsDataSource
 import daniellopes.io.newsappstarter.presenter.ViewHome
 import daniellopes.io.newsappstarter.presenter.search.SearchPresenter
 import daniellopes.io.newsappstarter.util.UtilQueryTextListener

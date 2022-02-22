@@ -1,6 +1,6 @@
-package daniellopes.io.newsappstarter.network
+package daniellopes.io.newsappstarter.data.remote
 
-import daniellopes.io.newsappstarter.model.NewsResponse
+import daniellopes.io.newsappstarter.data.local.model.NewsResponse
 import daniellopes.io.newsappstarter.util.Constants.Companion.API_KEY
 import retrofit2.Response
 import retrofit2.http.GET

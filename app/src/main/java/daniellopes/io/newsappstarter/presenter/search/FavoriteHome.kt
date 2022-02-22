@@ -1,6 +1,6 @@
 package daniellopes.io.newsappstarter.presenter.search
 
-import daniellopes.io.newsappstarter.model.Article
+import daniellopes.io.newsappstarter.data.local.model.Article
 
 interface FavoriteHome {
 

@@ -1,10 +1,9 @@
-package daniellopes.io.newsappstarter.model.data
+package daniellopes.io.newsappstarter.repository
 
 import android.content.Context
-import androidx.leanback.widget.Presenter
-import daniellopes.io.newsappstarter.model.Article
-import daniellopes.io.newsappstarter.model.db.ArticleDatabase
-import daniellopes.io.newsappstarter.network.RetrofitInstance
+import daniellopes.io.newsappstarter.data.local.db.ArticleDatabase
+import daniellopes.io.newsappstarter.data.local.model.Article
+import daniellopes.io.newsappstarter.data.remote.RetrofitInstance
 import daniellopes.io.newsappstarter.presenter.news.NewsHome
 import daniellopes.io.newsappstarter.presenter.search.FavoriteHome
 import daniellopes.io.newsappstarter.presenter.search.SearchHome
@@ -31,7 +30,7 @@ class NewsDataSource(context: Context) {
    }
 
    fun searchNews(term: String, callback: SearchHome.Presenter) {
-      GlobalScope.launch(Dispatchers.Main) {
+      CoroutineScope(Dispatchers.Main).launch {
          val response = RetrofitInstance.api.searchNews(term)
          if (response.isSuccessful) {
             response.body()?.let { newsResponse ->
@@ -47,24 +46,20 @@ class NewsDataSource(context: Context) {
    }
 
    fun saveArticle(article: Article) {
-      GlobalScope.launch(Dispatchers.Main) {
+      CoroutineScope(Dispatchers.Main).launch {
          newsRepository.updateInsert(article)
       }
    }
 
-   fun getAllArticle(callback: FavoriteHome.Presenter) {
+   fun getAllArticle(callback: FavoriteHome) {
       var allArticles: List<Article>
       CoroutineScope(Dispatchers.IO).launch {
          allArticles = newsRepository.getAll()
-
-         withContext(Dispatchers.Main) {
-            callback.onSuccess(allArticles)
-         }
       }
    }
 
    fun deleteArticle(article: Article?) {
-      GlobalScope.launch(Dispatchers.Main) {
+      CoroutineScope(Dispatchers.Main).launch {
          article?.let { articleDelete ->
             newsRepository.delete(articleDelete)
          }

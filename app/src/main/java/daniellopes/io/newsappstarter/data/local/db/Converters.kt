@@ -1,7 +1,7 @@
-package daniellopes.io.newsappstarter.model.db
+package daniellopes.io.newsappstarter.data.local.db
 
 import androidx.room.TypeConverter
-import daniellopes.io.newsappstarter.model.Source
+import daniellopes.io.newsappstarter.data.local.model.Source
 
 class Converters {
 
@@ -11,7 +11,7 @@ class Converters {
    }
 
    @TypeConverter
-   fun toSource(name: String ) :Source {
+   fun toSource(name: String ) : Source {
       return Source(name, name)
    }
 }

@@ -1,7 +1,7 @@
-package daniellopes.io.newsappstarter.model.db
+package daniellopes.io.newsappstarter.data.local.db
 
 import androidx.room.*
-import daniellopes.io.newsappstarter.model.Article
+import daniellopes.io.newsappstarter.data.local.model.Article
 
 @Dao
 interface ArticleDao {

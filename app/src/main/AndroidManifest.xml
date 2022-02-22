@@ -13,15 +13,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NewsAppStarter">
         <activity
-            android:name=".ui.SearchActivity"
+            android:name=".ui.activity.SearchActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.FavoriteActivity"
+            android:name=".ui.activity.FavoriteActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.ArticleActivity"
+            android:name=".ui.activity.ArticleActivity"
             android:exported="false" />
-        <activity android:name=".ui.MainActivity">
+        <activity android:name=".ui.activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

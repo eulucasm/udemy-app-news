@@ -1,6 +1,6 @@
 package daniellopes.io.newsappstarter.presenter.news
 
-import daniellopes.io.newsappstarter.model.NewsResponse
+import daniellopes.io.newsappstarter.data.local.model.NewsResponse
 
 interface NewsHome {
 
