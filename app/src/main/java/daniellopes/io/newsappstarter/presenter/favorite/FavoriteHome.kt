@@ -4,5 +4,9 @@ import daniellopes.io.newsappstarter.model.Article
 
 interface FavoriteHome {
 
-   fun showArticles(articles: List<Article>)
+   interface Presenter{
+      fun onSuccess(articles: List<Article>)
+   }
+
+
 }

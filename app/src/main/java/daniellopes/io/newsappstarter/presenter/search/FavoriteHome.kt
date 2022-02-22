@@ -4,5 +4,5 @@ import daniellopes.io.newsappstarter.model.Article
 
 interface FavoriteHome {
 
-   fun showArticles(articles: List<Article>)
+   fun Presenter(articles: List<Article>)
 }
