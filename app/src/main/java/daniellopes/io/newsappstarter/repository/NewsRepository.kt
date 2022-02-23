@@ -5,8 +5,8 @@ import daniellopes.io.newsappstarter.data.local.db.ArticleDatabase
 import daniellopes.io.newsappstarter.data.remote.NewsApi
 
 class NewsRepository(
-   private val db: ArticleDatabase,
-   private val api:NewsApi,
+   private val db: NewsApi,
+   private val api: ArticleDatabase,
    ) {
 
    //remeto
